@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('user/add','UserController@add');
+Route::any('user/index','UserController@index');
+Route::any('user/store','UserController@store');
+Route::get('user/edit/{id}','UserController@edit');
+Route::any('user/update','UserController@update');
+
+Route::get('user/del/{id}','UserController@destroy');
